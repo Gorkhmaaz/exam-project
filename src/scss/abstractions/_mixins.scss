@@ -1,0 +1,66 @@
+@mixin fonts-style($color-font, $font-weight) {
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-font;
+  font-weight: $font-weight;
+}
+@mixin fonts-style-mob($color-font, $font-weight) {
+  font-size: 12px;
+  line-height: 18px;
+  color: $color-font;
+  font-weight: $font-weight;
+}
+@mixin flexContainer(
+  $justify-content: center,
+  $align-items: center,
+  $gap: null
+) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+
+  @if $gap {
+    gap: #{$gap};
+  } @else {
+    gap: $gap;
+  }
+}
+
+@mixin modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@mixin modal-content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 35%;
+  background-color: white;
+  padding: 20px;
+}
+
+@mixin close-button {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: black;
+    text-decoration: none;
+    transform: rotate(360deg);
+  }
+}

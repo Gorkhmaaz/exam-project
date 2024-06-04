@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coral Shop</title>
+</head>
+
+<body>
+  <header class="py-4">
+    <div class="container">
+      <div class="row border-bott py-4 mb-4">
+        <div class="col-md-4 header-search"><i class="bi bi-search"></i></div>
+        <div class="col-md-4 d-flex justify-content-center header-logo">
+          <img src="./images/header.photo/logo.png" alt="" />
+        </div>
+        <div class="col-md-4 d-flex justify-content-end gap-3">
+          <a href="#" id="accountButton" class="header-icon"><i class="bi bi-person"></i> Account</a>
+          <a href="#" class="header-icon" id="openModalBtn"><i class="bi bi-bag-fill  position-relative"></i><span
+              class="position-absolute translate-middle badge rounded-pill bg-danger" id="cart-count">
+              0
+            </span>
+            Shopping</a>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg bg-light header-navbar">
+        <div class="container-fluid p-0">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="w-100 navbar-nav d-flex justify-content-between nav-link-color gap-2">
+              <a class="nav-link active me-2" aria-current="page" href="#">Jewelry & Accessories</a>
+              <a class="nav-link active" aria-current="page" href="#">Clothing & Shoes</a>
+              <a class="nav-link active" aria-current="page" href="#">Home & Living</a>
+              <a class="nav-link active" aria-current="page" href="#">Wedding & Party</a>
+              <a class="nav-link active" aria-current="page" href="#">Toys & Entertainment</a>
+              <a class="nav-link active" aria-current="page" href="#">Art & Collectibles</a>
+              <a class="nav-link active" aria-current="page" href="#">Craft Supplies & Tools</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="section-collection row mt-5">
+      <div class="img-left">
+        <img src="images/header.photo/Frame.png" alt="#" />
+      </div>
+      <div class="img-right">
+        <img src="images/header.photo/Vector.png" alt="#" />
+      </div>
+      <div class="section-collection-left col-md-6 col pt-5">
+        <h2 class="collection">Collections</h2>
+        <p class="header-discription mb-0">
+          You Can Explore Ans Shop Many Differnt Collection
+        </p>
+        <p class="header-discription mt-0 mb-5">From Various Barands Here.</p>
+        <button class="btn-shop" id="shopNowButton">
+          <a href="#product-section" class="shop-link"><i class="bi bi-bag-fill me-2"></i>Shop Now</a>
+        </button>
+      </div>
+      <div class="section-collection-right col-md-6 col d-flex justify-content-center">
+        <img src="images/header.photo/image-product.png" alt="women" />
+      </div>
+    </div>
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Login</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="loginEmail" required />
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="loginPassword" required />
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <a href="#" id="showRegister">Don't have an account? Register</a>
+            <form id="registerForm" style="display: none">
+              <div class="mb-3">
+                <label for="registerEmail" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="registerEmail" required />
+              </div>
+              <div class="mb-3">
+                <label for="registerPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="registerPassword" required />
+              </div>
+              <div class="mb-3">
+                <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="registerConfirmPassword" required />
+              </div>
+              <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+            <a href="#" id="showLogin" style="display: none">Already have an account? Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="main-section container">
+      <div class="row justify-content-center text-center gap-5 mb-4">
+        <div class="col-2">
+          <img src="images/sponsors/graphicLogo.png" alt="img" class="img-fluid" />
+        </div>
+        <div class="col-2">
+          <img src="images/sponsors/salvaLogo.png" alt="img" class="img-fluid" />
+        </div>
+        <div class="col-2">
+          <img src="images/sponsors/goldenLogo.png" alt="img" class="img-fluid" />
+        </div>
+        <div class="col-2">
+          <img src="images/sponsors/furnitureLogo.png" alt="img" class="img-fluid" />
+        </div>
+        <div class="col-2">
+          <img src="images/sponsors/travelLogo.png" alt="img" class="img-fluid" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 position-relative mb-4">
+          <div class="text-vertical">Explore New and Popular Styles</div>
+          <img src="images/sponsors/foto1.png" alt="img" class="img-fluid" />
+        </div>
+        <div class="col-md-6">
+          <div class="row mb-4">
+            <div class="col-6">
+              <img src="images/sponsors/boyFoto.png" alt="img" class="img-fluid" />
+            </div>
+            <div class="col-6 position-relative">
+              <img src="images/sponsors/girlFoto.png" alt="img" class="img-fluid sale" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <img src="images/sponsors/girlFoto2.png" alt="img" class="img-fluid" />
+            </div>
+            <div class="col-6">
+              <img src="images/sponsors/boyFoto2.png" alt="img" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="product-section">
+      <h2 class="text-center">Or Subscribe To The Newsletter</h2>
+      <div class="row justify-content-between align-items-center mb-4">
+        <div class="col d-flex gap-2">
+          <button class="btn btn-light mr-2">All Products</button>
+          <button class="btn btn-light mr-2">T-Shirt</button>
+          <button class="btn btn-light mr-2">Hoodies</button>
+          <button class="btn btn-light">Jacket</button>
+        </div>
+        <div class="col-auto">
+          <button class="btn btn-dark">Filter</button>
+        </div>
+      </div>
+      <div class="row" id="product-container">
+        <!-- <div class="col-md-3 mb-4">
+          <div class="product-item text-center">
+            <img src="images/sponsors/joggersImg.png" alt="img" class="img-fluid" />
+            <p>Adicolor Classics Joggers</p>
+            <span>Dress</span>
+            <span class="price">$63.85</span>
+            <button class="btn-add px-2 py-1 b-1 rounded-1">add</button>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="product-item text-center">
+            <img src="images/sponsors/nikeAirImg.png" alt="img" class="img-fluid" />
+            <p>Nike Sportswear Futura Luxe</p>
+            <span>Bag</span>
+            <span class="price">$130.00</span>
+            <button class="btn-add px-2 py-1 b-1 rounded-1">add</button>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="product-item text-center">
+            <img src="images/sponsors/scarfImg.png" alt="img" class="img-fluid" />
+            <p>Geometric Print Scarf</p>
+            <span>Scarf</span>
+            <span class="price">$53.00</span>
+            <button class="btn-add px-2 py-1 b-1 rounded-1">add</button>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="product-item text-center">
+            <img src="images/sponsors/hoodieImg.png" alt="img" class="img-fluid" />
+            <p>Yellow Reserved Hoodie</p>
+            <span>Dress</span>
+            <span class="sale-price">$364.00 <span>$155.00</span></span>
+            <button class="btn-add px-2 py-1 b-1 rounded-1">add</button>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="product-item text-center">
+            <img src="images/sponsors/dressGreenImg.png" alt="img" class="img-fluid" />
+            <p>Basic Dress Green</p>
+            <span>Dress</span>
+            <span class="price">$236.00</span>
+            <button class="btn-add px-2 py-1 b-1 rounded-1">add</button>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="product-item text-center">
+            <img src="images/sponsors/nikeAirImg.png" alt="img" class="img-fluid" />
+            <p>Nike Air Zoom Pegasus</p>
+            <span>Shoe</span>
+            <span class="sale-price">$220.00 <span>$198.00</span></span>
+            <button class="btn-add px-2 py-1 b-1 rounded-1">add</button>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="product-item text-center">
+            <img src="images/sponsors/nikeMiler.png" alt="img" class="img-fluid" />
+            <p>Nike Repel Miler</p>
+            <span>Dress</span>
+            <span class="price">$120.50</span>
+            <button class="btn-add px-2 py-1 b-1 rounded-1">add</button>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="product-item text-center">
+            <img src="images/sponsors/nikeGlassesImg.png" alt="img" class="img-fluid" />
+            <p>Nike Sportswear Futura Luxe</p>
+            <span>Glasses</span>
+            <span class="price">$160.00</span>
+            <button class="btn-add px-2 py-1 b-1 rounded-1">add</button>
+          </div>
+        </div> -->
+      </div>
+      <!-- Modal -->
+      <div class="modal modal__product" id="myModal">
+        <div class="modal-content">
+          <span class="close" id="closeModalBtn">&times;</span>
+          <div class="modal__product__section">
+            <div class="modal__product__section__cart cart-container">
+
+            </div>
+            <div class="modal__product__section__total total-price">
+            </div>
+          </div>
+        </div>
+        <div class="navigation-buttons d-flex justify-content-center gap-2">
+          <button type="button" class="btn btn-secondary">Prev</button>
+          <button type="button" class="btn btn-success">Next</button>
+        </div>
+    </section>
+    <section class="brand-banner">
+      <div class="brand-banner__container">
+        <div class="brand-banner__img">
+          <img class="brand-banner__img-logo_one" width="1920" src="./images/brand-banner.photo/zara-bg.png" />
+          <img class="brand-banner__img-logo_two" src="./images/brand-banner.photo/zara-bg-mob.png" />
+        </div>
+        <div class="brand-banner__img-inner">
+          <img class="brand-banner__img-bg" src="./images/brand-banner.photo/Zara_Logo-1.png" alt="ZARA1" />
+        </div>
+        <div class="brand-banner__content">
+          <img class="brand-banner__img-bg-content" src="./images/brand-banner.photo/Zara_Logo-2.png" alt="ZARA2" />
+          <p class="brand-banner__subtitle text-white fw-light">
+            Lustrous yet understated. The new evening <br />
+            wear collection exclusively offered at the <br />
+            reopened Giorgio Armani boutique in Los <br />
+            Angeles.
+          </p>
+          <button class="brand-banner__btn fw-light">See Collection</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-slider" width="1320">
+      <h2 class="section-title">Best Sellers</h2>
+      <div class="section-top__products">
+        <h6 class="section-top__products-all style-fonts">All Products</h6>
+        <h6 class="section-top__products-tshirt style-fonts">T-Shirt</h6>
+        <h6 class="section-top__products-hoodies style-fonts">Hoodies</h6>
+        <h6 class="section-top__products-jacket style-fonts">Jacket</h6>
+      </div>
+      <ul class="slider-list__products d-flex"></ul>
+    </section>
+    <section class="product-promotions">
+      <div class="follow-gallery mb-5">
+        <h2 class="follow-gallery__title text-center mb-4 display-5">
+          Follow products and discounts on Instagram
+        </h2>
+        <ul class="gallery-list list-unstyled d-flex justify-content-center flex-wrap gap-3">
+          <li class="gallery-list__item">
+            <img src="./images/promo-section-img1.png" alt="Promo 1" />
+          </li>
+          <li class="gallery-list__item">
+            <img src="./images/promo-section-img2.png" alt="Promo 2" />
+          </li>
+          <li class="gallery-list__item">
+            <img src="./images/promo-section-img3.png" alt="Promo 3" />
+          </li>
+          <li class="gallery-list__item">
+            <img src="./images/promo-section-img4.png" alt="Promo 4" />
+          </li>
+          <li class="gallery-list__item">
+            <img src="./images/promo-section-img5.png" alt="Promo 5" />
+          </li>
+          <li class="gallery-list__item">
+            <img src="./images/promo-section-img6.png" alt="Promo 6" />
+          </li>
+        </ul>
+      </div>
+
+      <div class="newsletter text-center">
+        <h2 class="newsletter__title mb-5 display-5">
+          Or Subscribe To The Newsletter
+        </h2>
+        <form class="newsletter-form d-flex flex-column flex-md-row justify-content-center gap-4">
+          <input class="newsletter-form__input form-control p-0 m-0" type="email" placeholder="Email Address..."
+            required />
+          <button class="newsletter-form__btn btn text-uppercase border border-bottom border-dark" type="submit">
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-wrapper">
+      <div class="footer-box">
+        <h2 class="footer-box__title text-uppercase mb-4">Coral</h2>
+        <p class="footer-box__paragraph mb-4">
+          Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing<br />
+          Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et<br />
+          Dolore Magna Aliqua
+        </p>
+
+        <ul class="social-networks list-unstyled d-flex gap-4">
+          <li class="social-networks__item">
+            <a href="https://www.facebook.com/coralfashionboutique/?locale=az_AZ&_rdc=1&_rdr"><i
+                class="bi bi-facebook text-dark"></i>
+            </a>
+          </li>
+          <li class="social-networks__item">
+            <a href="https://x.com/i/flow/login?redirect_after_login=%2Fshopcoralboutiq"><i
+                class="bi bi-twitter text-dark"></i></a>
+          </li>
+          <li class="social-networks__item">
+            <a href="https://www.linkedin.com/company/coral-boutique-villas/">
+              <i class="bi bi-linkedin text-dark"></i></a>
+          </li>
+          <li class="social-networks__item">
+            <a href="https://www.instagram.com/shopcoralboutique/"><i class="bi bi-instagram text-dark"></i></a>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="catalog-list list-unstyled">
+        <li class="catalog-item">
+          <p class="catalog-item__paragraph fw-bold">CATALOG</p>
+        </li>
+        <li class="catalog-item">
+          <p class="catalog-item__paragraph mb-1">Necklaces</p>
+        </li>
+        <li class="catalog-item">
+          <p class="catalog-item__paragraph mb-1">Hoodies</p>
+        </li>
+        <li class="catalog-item">
+          <p class="catalog-item__paragraph mb-1">Jewelry Box</p>
+        </li>
+        <li class="catalog-item">
+          <p class="catalog-item__paragraph mb-1">T-shirt</p>
+        </li>
+        <li class="catalog-item">
+          <p class="catalog-item__paragraph">Jacket</p>
+        </li>
+      </ul>
+
+      <ul class="about-list list-unstyled">
+        <li class="about-item">
+          <p class="about-item__paragraph fw-bold">ABOUT US</p>
+        </li>
+        <li class="about-item">
+          <p class="about-item__paragraph mb-1">Our Producers</p>
+        </li>
+        <li class="about-item">
+          <p class="about-item__paragraph mb-1">Sitemap</p>
+        </li>
+        <li class="about-item">
+          <p class="about-item__paragraph mb-1">FAQ</p>
+        </li>
+        <li class="about-item">
+          <p class="about-item__paragraph mb-1">About Us</p>
+        </li>
+        <li class="about-item">
+          <p class="about-item__paragraph">Terms & Conditions</p>
+        </li>
+      </ul>
+
+      <ul class="customer-list list-unstyled">
+        <li class="customer-item">
+          <p class="customer-item__paragraph fw-bold">CUSTOMER SERVICES</p>
+        </li>
+        <li class="customer-item">
+          <p class="customer-item__paragraph mb-1">Contact Us</p>
+        </li>
+        <li class="customer-item">
+          <p class="customer-item__paragraph mb-1">Track Your Order</p>
+        </li>
+        <li class="customer-item">
+          <p class="customer-item__paragraph mb-1">Product Care & Repair</p>
+        </li>
+        <li class="customer-item">
+          <p class="customer-item__paragraph mb-1">Book an Appointment</p>
+        </li>
+        <li class="customer-item">
+          <p class="customer-item__paragraph">Shipping & Returns</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bottom-footer">
+      <p class="bottom-footer__paragraph text-white">© 2022 Coral , Inc.</p>
+
+      <div class="icons-box">
+        <img class="icons-box__img" src="./images/footer-icons.png" alt="" />
+      </div>
+
+      <p class="bottom-scroll text-white">
+        Scroll To Top
+        <i class="bottom-scroll__icon text-white bi bi-arrow-up"></i>
+      </p>
+    </div>
+  </footer>
+  <iframe src="./collection.html"></iframe>
+  <script type="module" src="./js/page.js"></script>
+  <script type="module" src="./js/cart.js"></script>
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

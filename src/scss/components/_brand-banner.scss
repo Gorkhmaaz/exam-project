@@ -1,0 +1,78 @@
+//СТИЛИ ДЛЯ МОБИЛЬНОЙ ВЕРСИИ
+.brand-banner__img-logo_one {
+  display: block;
+}
+
+.brand-banner__img-logo_two {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .brand-banner__img-logo_one {
+    display: none;
+  }
+  .brand-banner__img-logo_two {
+    display: block;
+    width: 500px;
+    height: 1075px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .brand-banner__img-bg {
+    width: 455px;
+    height: 104px;
+    transform: translate(21%, -463px) rotate(270deg);
+  }
+}
+@media (max-width: 768px) {
+  .brand-banner__img-bg-content {
+    width: 141px;
+    height: 60px;
+  }
+}
+
+// СТИЛИ ДЛЯ ДЕСКТОПНЫЙ ВЕРСИИ
+.brand-banner {
+  margin-top: 140px;
+}
+.brand-banner__img {
+  position: relative;
+}
+.brand-banner__img-inner {
+  position: absolute;
+  transform: translate(183%, -277%);
+  z-index: 3;
+}
+.brand-banner__content {
+  position: absolute;
+  transform: translate(228%, -158%);
+  @media (max-width: 768px) {
+    transform: translate(240%, -410%);
+  }
+}
+.brand-banner__subtitle {
+  margin: 54px 0;
+  font-size: 26px;
+  text-transform: capitalize;
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 30px 0;
+    margin: 0;
+  }
+}
+.brand-banner__btn {
+  padding: 19px 26px;
+  font-size: 30px;
+  line-height: 34px;
+  cursor: pointer;
+  @media (max-width: 768px) {
+    padding: 14px 18px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+.brand-banner__btn:hover {
+  background-color: #ff6d61;
+}

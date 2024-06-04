@@ -1,0 +1,60 @@
+footer {
+  font-family: "Open Sans";
+  width: 1920px;
+  margin: 0 auto;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 1320px;
+  margin-bottom: 90px;
+}
+
+.footer-box__title {
+  position: relative;
+  padding-left: 34px;
+}
+
+.footer-box__title::before {
+  content: "";
+  position: absolute;
+  width: 31px;
+  height: 15px;
+  top: 12px;
+  left: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url("../images/before-after.png");
+}
+
+.footer-box__title::after {
+  content: "";
+  position: absolute;
+  width: 31px;
+  height: 15px;
+  top: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url("../images/before-after.png");
+}
+
+.footer-box__paragpaph {
+  font-size: 16px;
+  color: rgba(30, 40, 50, 0.75);
+  line-height: 22px;
+}
+
+.social-networks__item {
+  width: 25px;
+  height: 25px;
+}
+
+.bottom-footer {
+  width: 1920px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 16px;
+  background-color: rgb(30, 40, 50);
+}
